@@ -21,4 +21,9 @@ public class Controllers {
 	public String queryWithName(@RequestParam(value = "name") String name) {
 		return "Hello " + name;
 	}
+	
+	@GetMapping("/param/{name}")
+	public String sayHello(@PathVariable String name) {
+		return "Hello" + name;
+	}
 }
